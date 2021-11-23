@@ -55,12 +55,19 @@ namespace GreekHelper
                 WordTypes wordType = TextToWordType[wordTypeString];
 
                 string[] meanings = units[1].Split(',');
-                Tags[] tags = new Tags[units.Length - 2];
-                for(int j = 2; j < units.Length; j++)
+                //Tags[] tags = new Tags[units.Length - 2];
+                //for(int j = 2; j < units.Length; j++)
+                //{
+                //    tags[j-2] = TextToTags[units[j]];
+                //}
+                Word newWord;
+                switch(wordType)
                 {
-                    tags[j-2] = TextToTags[units[j]];
+                    case WordTypes.Noun:
+
+                        //newWord = new Noun(word, meanings, );
+                        break;
                 }
-                Word newWord = new Word(word, wordType, meanings, tags);
                 words.Add(newWord);
             }
             return words;

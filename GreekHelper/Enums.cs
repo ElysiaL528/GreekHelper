@@ -15,6 +15,20 @@ namespace GreekHelper
         Adj,
         Adv
     }
+    public enum Genders
+    {
+        M,
+        F,
+        N
+    }
+    public enum Cases
+    {
+        Nom,
+        Gen,
+        Dat,
+        Acc,
+        Voc
+    }
     public enum Tags
     {
         Masculine,
