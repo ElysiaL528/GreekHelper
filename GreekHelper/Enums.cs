@@ -29,6 +29,26 @@ namespace GreekHelper
         Acc,
         Voc
     }
+
+    public enum Tenses
+    {
+        Present,
+        Imperfect,
+        Future
+    }
+
+    public enum Voices
+    {
+        Active,
+        Passive
+    }
+
+    public enum Moods
+    {
+        Indicative,
+        Imperaitve
+    }
+
     public enum Tags
     {
         Masculine,
