@@ -8,8 +8,13 @@ namespace GreekHelper
 {
     class Preposition : Word
     {
-        public Preposition(string val, string[] meanings) : base(val, meanings)
+        /// <summary>
+        /// the case of the preposition's object
+        /// </summary>
+        public Cases FollowingCase { get; }
+        public Preposition(string val, string[] meanings, Cases followingCase) : base(val, meanings)
         {
+            FollowingCase = followingCase;
         }
     }
 }

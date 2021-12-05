@@ -102,7 +102,14 @@ namespace GreekHelper
             //string text = "αποστολος (N)- apostle - 1/M/S/Nom";
             //File.WriteAllText("greekdict.txt", text);
             string[] lines = File.ReadAllLines("greekdict.txt");
-            var words = ParseDictionary(lines);
+            List<Word> words = ParseDictionary(lines);
+
+            Trie trie = new Trie();
+
+            foreach (var word in words)
+            {
+                
+            }
 
         }
     }
