@@ -108,9 +108,8 @@ namespace GreekHelper
 
             foreach (var word in words)
             {
-                
+                trie.Insert(word);
             }
-
         }
     }
 }

@@ -15,24 +15,30 @@ namespace GreekHelper
             Root = new Node('$');
         }
 
-        public void Insert(string word, List<string> meanings, Tags[] tags)
+        //public void Insert(string word, List<string> meanings, Tags[] tags)
+        //{
+        //    Word newWord = new Word(word, meanings.ToArray());
+            
+        //}
+
+        public void Insert(Word word)
         {
             var temp = Root;
-            foreach(var letter in word)
+            string wordText = word.Value;
+            foreach (var letter in wordText)
             {
-                if(!temp.Children.ContainsKey(letter))
+                if (!temp.Children.ContainsKey(letter))
                 {
                     temp.Children.Add(letter, new Node(letter));
                 }
                 temp = temp.Children[letter];
             }
-            temp.IsWord = true;
-            temp.Meanings = meanings;
-            temp.Tags = tags;
+
+            temp.Word = word;
         }
 
-        public void Insert(string word, string meaning, Tags[] tags)
-            => Insert(word, new List<string>() { meaning }, tags);
+        //public void Insert(string word, string meaning, Tags[] tags)
+        //    => Insert(word, new List<string>() { meaning }, tags);
 
         public Node Search(string word)
         {
