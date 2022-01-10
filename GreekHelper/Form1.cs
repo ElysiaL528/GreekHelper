@@ -9,6 +9,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/*
+ αγγελος (N) - angel, messenger - 2/M
+αμεν (Adv) - verily, truly, amen, so let it be
+ανθρωπος (N) - man, mankind, person, people, humankind, human being - 1/M
+αποστολος (N) - apostle, envoy, messenger - 1/M
+ */
 namespace GreekHelper
 {
     public partial class Form1 : Form
@@ -38,6 +44,13 @@ namespace GreekHelper
             {"Adv", WordTypes.Adv }
         };
         List<Word> translatedWords = new List<Word>();
+
+        #region Endings
+        List<string> Masc2Endings = new List<string>()
+        {
+            "ος", "ου", "ω", "ον", "οι", "ων", "οις", "ους"
+        };
+        #endregion
         public Form1()
         {
             InitializeComponent();
